@@ -1,12 +1,12 @@
-import Auth from './components/Auth';
-function App() {
+import React from 'react'
+import Auth from './components/Auth'
 
+
+const App = () => {
   return (
-    <>
-      <div>
-        <Auth/>
-      </div>
-    </>
+    <div>
+      <Auth />
+    </div>
   )
 }
 
