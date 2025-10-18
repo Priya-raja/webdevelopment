@@ -1,7 +1,8 @@
 function validate(email) {
-    
-    let pattern =/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return pattern.test(email)
+
+    const regex = /^[a-zA-Z0-9]([a-zA-Z0-9._-]*[a-zA-Z0-9])?@[a-zA-Z0-9]([a-zA-Z0-9.-]*[a-zA-Z0-9])?(\.[a-zA-Z]{2,})+$/;
+  
+    return regex.test(email)
 }
 
 console.log(validate('priya@gmail.com'))

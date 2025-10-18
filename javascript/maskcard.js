@@ -1,13 +1,17 @@
 function mask(card) {
 
-  let parts = card.split('-');
-  for (let i = 0; i < parts.length - 1; i++){
-
-    parts[i] = '*'.repeat(parts[i].length);
-  }
+  const separator = card.includes(' ') ? ' ' : '-';
   
-  return parts.join('-');
-  }
+  // Split by space OR hyphen
+  let cardsplit = card.split(/[\s-]/);
+  
+  let masked = cardsplit.map((part, index) => {
+    if (index === cardsplit.length - 1) {
+      return part;
+    }
+    return '*'.repeat(part.length);
+  }).join(separator);  // Use detected separator
+  
   
 
 console.log(mask("9998-7788-9087-4565"))
